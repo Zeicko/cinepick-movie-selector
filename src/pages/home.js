@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const api_key = "435c8880fa41fdbe5fba133c47f78d2b";
 const BASE_URL = "https://api.themoviedb.org/3";
@@ -11,13 +12,7 @@ function HomePage() {
   const api = axios.create({ baseURL: BASE_URL });
 
   useEffect(() =>{
-    // api.get("/movie/527774", { params: { api_key } })
-    // .then((res) => {
-    //   // setData(res.data.results);
-    //   console.log(res.data)
-    // });
-
-    api.get("/movie/upcoming", { params: { api_key, page:3 }  })
+    api.get("/movie/upcoming", { params: { api_key, page:1 }  })
     .then((res) => {
       setData(res.data.results);
       console.log(res.data);
@@ -28,10 +23,12 @@ function HomePage() {
     <div className="App">
       <header className="App-header">
         <div className ="grid">
-          {data.map(({ title, poster_path }) => (
+          {data.map(({ title, poster_path, id }) => (
             <div className="item2">
-              <p>{ title }</p>
-              <img src={ getImage(poster_path) }/>
+                <p>{ title }</p>
+                <Link to={ `/movie/${id}` }>
+                    <img src={ getImage(poster_path) }/>
+                </Link>
             </div>
           ))}
         </div>
