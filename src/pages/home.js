@@ -12,22 +12,23 @@ function HomePage() {
   const api = axios.create({ baseURL: BASE_URL });
 
   useEffect(() =>{
-    api.get("/movie/upcoming", { params: { api_key, page:1 }  })
+    api.get("/movie/upcoming", { params: { api_key, page:2 }  })
     .then((res) => {
-      setData(res.data.results);
+      setData(res.data.results,);
       console.log(res.data);
     });
   }, []);
 
   return (
-    <div className="App">
+    <div style={{background: "red"}} className="App">
       <header className="App-header">
+        <img src= {"/img/cine.png"}/>
         <div className ="grid">
           {data.map(({ title, poster_path, id }) => (
-            <div className="item2">
-                <p>{ title }</p>
+            <div className="item">
+                <p style={{color: "#FFFFFF"}}>{ title }</p>
                 <Link to={ `/movie/${id}` }>
-                    <img src={ getImage(poster_path) }/>
+                    <img style = {{borderRadius : "20px"}}classname="posterPicture" src={ getImage(poster_path) }/>
                 </Link>
             </div>
           ))}
