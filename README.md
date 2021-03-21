@@ -1,7 +1,20 @@
-- réussi à afficher les upcoming movie (all) avec l'api donc avec le bon chemin
+### CinePick Movie Selector
 
-- comprendre react 
+### TO DO
 
-- demain comprendre pq ça marche que pour les upcoming,
+- inserting the model 
+- build maybe responsive 
+- build other routes for trends/new/tv show/emissions...
 
-(ça à marché pour trending un moment mais plus mtn)
+For run the app 
+
+### `npm install`
+
+
+and 
+
+### `npm start`
+
+Open [http://localhost:3000] for see the app in your browser 
+
+
