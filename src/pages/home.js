@@ -22,7 +22,6 @@ function HomePage() {
   return (
     <div style={{background: "red"}} className="App">
       <header className="App-header">
-        <img src= {"/img/cine.png"}/>
         <div className ="grid">
           {data.map(({ title, poster_path, id }) => (
             <div className="item">
