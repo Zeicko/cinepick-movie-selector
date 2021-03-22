@@ -2,9 +2,11 @@
 
 ### TO DO
 
-- inserting the model 
+- inserting the model/ CSS 
 - build maybe responsive 
-- build other routes for trends/new/tv show/emissions...
+- movie detail adding all the infos 
+- Homepage build in last 
+- features ^^ 
 
 For run the app 
 
