@@ -50,7 +50,6 @@ function MoviePage() {
                       <p>Durée du film : {movieInfo.runtime} minutes </p>
                       <p>{movieInfo.status}</p>
                       {movieInfo.belongs_to_collection}
-                      {movieInfo.imdb_id}
                       {movieInfo.genres.map((genre) =>
                         <p className='genres'> {genre.name} </p>
                       )}
