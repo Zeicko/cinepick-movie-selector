@@ -17,7 +17,6 @@ function HomePage() {
     api.get("/movie/upcoming", { params: { api_key, page:2 }  })
     .then((res) => {
       setMovies(res.data.results);
-      console.log(res.movies);
     });
   }, []);
 

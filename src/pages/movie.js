@@ -9,7 +9,7 @@ const getImage = (path) => `https://image.tmdb.org/t/p/w300/${path}`;
 
 function MoviePage() {
   const params = useParams()
-  const [movieInfo, setMovieInfo] = useState({ title : "", genres : [] });
+  const [movieInfo, setMovieInfo] = useState({});
   const [dataloaded, setdataLoaded] = useState(false);
 
 
@@ -20,10 +20,13 @@ function MoviePage() {
     api.get(`/movie/${params.id}`, { params: { api_key } })
     .then((res) => {
       setMovieInfo(res.data);
+      setdataLoaded(true);
     });
     // eslint-disable-next-line
   }, []);
-
+  if (!dataloaded) {
+    return <div>Loading...</div>
+  } 
   return (
     <body className="bodymovie">
         <div className="App">
@@ -46,7 +49,20 @@ function MoviePage() {
                       <p>Date de sortie : {movieInfo.release_date}</p>
                       <p>Durée du film : {movieInfo.runtime} minutes </p>
                       <p>{movieInfo.status}</p>
-                       {movieInfo.genres[1].name}
+                      {movieInfo.belongs_to_collection}
+                      {movieInfo.imdb_id}
+                      {movieInfo.genres.map((genre) =>
+                        <p className='genres'> {genre.name} </p>
+                      )}
+                      {movieInfo.production_countries.map((country) =>
+                        <p className='genres'> {country.iso_3166_1} </p>
+                      )}
+                      {movieInfo.production_companies.map((company) =>
+                        <div>
+                        <p className='genres'> {company.name} </p>
+                        <p className='genres'> {company.origin_country} </p>  
+                        </div>
+                        )}
                     </div>
                     <div className="divsynopsis">
                         <h3>Synopsis</h3>
