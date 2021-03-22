@@ -25,8 +25,11 @@ function MoviePage() {
     <div className="App">
       <header className="App-header">
         <div className ="grid">
-          <img  className ="backGround" src = {getImage(movieInfo.backdrop_path)} alt = "Background" />
+          {/* <img  className ="backGround" src = {getImage(movieInfo.backdrop_path)} alt = "Background" /> */}
+          <div className = "MainTitle">
           {movieInfo.title}
+          </div>
+
           {/* <img src = { getImage(movieInfo.poster_path) } alt ="Poster"/>
           {movieInfo.release_date}
           {movieInfo.popularity}
