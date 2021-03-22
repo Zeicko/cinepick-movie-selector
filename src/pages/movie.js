@@ -11,6 +11,7 @@ function MoviePage() {
   const params = useParams()
   const [movieInfo, setMovieInfo] = useState({});
   const [dataloaded, setdataLoaded] = useState(false);
+  // const [similarMovie, setSimilarMovie] = useState([0]);
 
 
 
@@ -19,9 +20,15 @@ function MoviePage() {
     const api = axios.create({ baseURL: BASE_URL });
     api.get(`/movie/${params.id}`, { params: { api_key } })
     .then((res) => {
-      setMovieInfo(res.data);
+      console.log(res.data)
+      setMovieInfo(res.data)
       setdataLoaded(true);
+      // setSimilarMovie(res.data);
     });
+    // api.get(`/movie/${params.id}/similar`, { params: { api_key }})
+    // .then((res) => {
+    //   setSimilarMovie(res.data);
+    // });
     // eslint-disable-next-line
   }, []);
   if (!dataloaded) {
@@ -42,14 +49,12 @@ function MoviePage() {
                 <div className="maindiv">
                   <div className="second div">
                     <img src = { getImage(movieInfo.poster_path) } alt ="Poster"/>
-
                     </div>
                   <div className="third-div">
                     <div className="divNumber">
                       <p>Date de sortie : {movieInfo.release_date}</p>
                       <p>Durée du film : {movieInfo.runtime} minutes </p>
                       <p>{movieInfo.status}</p>
-                      {movieInfo.belongs_to_collection}
                       {movieInfo.genres.map((genre) =>
                         <p className='genres'> {genre.name} </p>
                       )}
@@ -66,7 +71,11 @@ function MoviePage() {
                     <div className="divsynopsis">
                         <h3>Synopsis</h3>
                         {movieInfo.overview}
+                        {movieInfo.homepage}
+                        {movieInfo.vote_average}
+                        
                     </div>
+                    
                   </div>
                 </div>
               </div>

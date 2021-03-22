@@ -14,7 +14,7 @@ function HomePage() {
 
   useEffect(() =>{
     const api = axios.create({ baseURL: BASE_URL });
-    api.get("/movie/upcoming", { params: { api_key, page:2 }  })
+    api.get("/movie/upcoming", { params: { api_key, page:1 }  })
     .then((res) => {
       setMovies(res.data.results);
     });
