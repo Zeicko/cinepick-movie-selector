@@ -41,6 +41,8 @@ function MoviePage() {
                       
                   </div>
                   <div className="third-div">
+                
+                    <p>publique : {movieInfo.popularity} </p>
                     <div className="divNumber">
                       <p>Date de sortie : {movieInfo.release_date}</p>
                       <p>Durée du film : {movieInfo.runtime} minutes </p>
