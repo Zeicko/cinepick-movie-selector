@@ -22,24 +22,40 @@ function MoviePage() {
   }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <div className ="container">
-          {/* <img  className ="backGround" src = {getImage(movieInfo.backdrop_path)} alt = "Background" /> */}
-          <div className = "MainTitle">
-          {movieInfo.title}
-          </div>
-
-          {/* <img src = { getImage(movieInfo.poster_path) } alt ="Poster"/>
-          {movieInfo.release_date}
-          {movieInfo.popularity}
-          {movieInfo.overview} */}
-          <p>Date de sortie : {movieInfo.release_date}</p>
-          <p>Durée du film : {movieInfo.runtime} minutes </p> 
-
+    <body className="bodymovie">
+        <div className="App">
+          <header className="App-header">
+            <div className ="container">
+              {/* <img  className ="backGround" src = {getImage(movieInfo.backdrop_path)} alt = "Background" /> */}
+              <div className = "MainTitle">
+                <div className="flextitle">
+                  {movieInfo.title}
+                </div>
+              </div>
+              <div className="divbox">
+                <div className="maindiv">
+                  <div className="second div">
+                    <img src = { getImage(movieInfo.poster_path) } alt ="Poster"/>
+                     {/* // {movieInfo.release_date}
+                    // {movieInfo.popularity} */}
+                      
+                  </div>
+                  <div className="third-div">
+                    <div className="divNumber">
+                      <p>Date de sortie : {movieInfo.release_date}</p>
+                      <p>Durée du film : {movieInfo.runtime} minutes </p>
+                    </div>
+                    <div className="divsynopsis">
+                        <h3>Synopsis</h3>
+                        {movieInfo.overview}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </header>
         </div>
-      </header>
-    </div>
+    </body>
   );
 }
 
