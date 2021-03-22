@@ -33,8 +33,9 @@ function MoviePage() {
           {/* <img src = { getImage(movieInfo.poster_path) } alt ="Poster"/>
           {movieInfo.release_date}
           {movieInfo.popularity}
-          {movieInfo.overview}
-          {movieInfo.runtime} */}
+          {movieInfo.overview} */}
+          <p>Date de sortie : {movieInfo.release_date}</p>
+          <p>Durée du film : {movieInfo.runtime} minutes </p> 
 
         </div>
       </header>
