@@ -2,9 +2,8 @@
 
 ### TO DO
 
-- inserting the model/ CSS 
-- build maybe responsive 
-- movie detail adding all the infos 
+
+- NO FILMS BEFORE WE DO THE FIRST INPUT/ fix this and show the printed movies before  
 - Homepage build in last 
 - features ^^ 
 
