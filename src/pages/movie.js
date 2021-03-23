@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router";
+import image from "./img/cine.png";
 
 const api_key = "435c8880fa41fdbe5fba133c47f78d2b";
 const BASE_URL = "https://api.themoviedb.org/3";
@@ -38,6 +39,8 @@ function MoviePage() {
     <body className="bodymovie">
         <div className="App">
           <header className="App-header">
+          <img src ={image} style={{width : "560px"}} alt="PosterImage" className="logo"/>
+          </header>
             <div className ="container">
               {/* <img  className ="backGround" src = {getImage(movieInfo.backdrop_path)} alt = "Background" /> */}
               <div className = "MainTitle">
@@ -54,19 +57,17 @@ function MoviePage() {
                     <div className="divNumber">
                       <p>Date de sortie : {movieInfo.release_date}</p>
                       <p>Durée du film : {movieInfo.runtime} minutes </p>
-                      <p>{movieInfo.status}</p>
-                      {movieInfo.genres.map((genre) =>
-                        <p className='genres'> {genre.name} </p>
+                      
+                      <div className="catégorie"><span><strong>Catégorie(s) :</strong></span>{movieInfo.genres.map((genre) =>
+                        <span className='genres'>{genre.name}</span>
                       )}
-                      {movieInfo.production_countries.map((country) =>
-                        <p className='genres'> {country.iso_3166_1} </p>
-                      )}
-                      {movieInfo.production_companies.map((company) =>
-                        <div>
-                        <p className='genres'> {company.name} </p>
-                        <p className='genres'> {company.origin_country} </p>  
-                        </div>
+                      </div>
+                      <div className="productionCompagnie" ><span><strong>compagnie de production :</strong></span>{movieInfo.production_companies.map((company) =>
+                        
+                        <span className='genres'> {company.name}, {company.origin_country} ;</span>
+                        
                         )}
+                      </div>
                     </div>
                     <div className="divsynopsis">
                         <h3>Synopsis</h3>
@@ -80,7 +81,7 @@ function MoviePage() {
                 </div>
               </div>
             </div>
-          </header>
+          
         </div>
     </body>
   );
