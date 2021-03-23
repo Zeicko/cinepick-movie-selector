@@ -23,7 +23,7 @@ function MoviePage() {
     .then((res) => {
       console.log(res.data)
       setMovieInfo(res.data)
-      setdataLoaded(true);
+      setdataLoaded(true)
       // setSimilarMovie(res.data);
     });
     // api.get(`/movie/${params.id}/similar`, { params: { api_key }})
@@ -62,7 +62,7 @@ function MoviePage() {
                         <span className='genres'>{genre.name}</span>
                       )}
                       </div>
-                      <div className="productionCompagnie" ><span><strong>compagnie de production :</strong></span>{movieInfo.production_companies.map((company) =>
+                      <div className="productionCompagnie" ><span><strong>Compagnie de production :</strong></span>{movieInfo.production_companies.map((company) =>
                         
                         <span className='genres'> {company.name}, {company.origin_country} ;</span>
                         
