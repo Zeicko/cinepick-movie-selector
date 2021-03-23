@@ -42,12 +42,13 @@ function HomePage() {
       </header>
       <input value = {filter} placeholder ="Search your movie" key="inputMovie" onChange= { (e) => { setFilter(e.target.value)} } />
       <div className ="grid">
-        {printedMovies.map(({ title, poster_path, id }) => (
+        {printedMovies.map(({ title, poster_path, id , release_date}) => (
           <div className="item">
               <p style={{color: "#FFFFFF"}}>{ title }</p>
               <Link to={ `/movie/${id}` }>
                   <img style = {{borderRadius : "20px"}}classname="posterPicture" src={ getImage(poster_path) } alt ="PosterImage"/>
               </Link>
+            {release_date}
           </div>
         ))}
       </div>
