@@ -14,28 +14,29 @@ function HomePage() {
 
   useEffect(() =>{
     const api = axios.create({ baseURL: BASE_URL });
-    api.get("/movie/upcoming", { params: { api_key, page:1 }  })
+    api.get("/movie/upcoming", { params: { api_key, page:2 }  })
     .then((res) => {
       setMovies(res.data.results);
     });
   }, []);
 
   return (
-    <div style={{background: "red"}} className="App">
+    <body>
       <header className="App-header">
-        <img src ={image} style={{width : "20%"}} alt="PosterImage"/>
-        <div className ="grid">
-          {movies.map(({ title, poster_path, id }) => (
-            <div className="item">
-                <p style={{color: "#FFFFFF"}}>{ title }</p>
-                <Link to={ `/movie/${id}` }>
-                    <img style = {{borderRadius : "20px"}}classname="posterPicture" src={ getImage(poster_path) } alt ="PosterImage"/>
-                </Link>
-            </div>
-          ))}
-        </div>
+        <img src ={image} style={{width : "560px"}} alt="PosterImage" className="logo"/>
       </header>
-    </div>
+      <div className ="grid">
+        {movies.map(({ title, poster_path, id }) => (
+          <div className="item">
+              <p style={{color: "#FFFFFF"}}>{ title }</p>
+              <Link to={ `/movie/${id}` }>
+                  <img style = {{borderRadius : "20px"}}classname="posterPicture" src={ getImage(poster_path) } alt ="PosterImage"/>
+              </Link>
+          </div>
+        ))}
+      </div>
+      
+    </body>
   );
 }
 
