@@ -15,17 +15,24 @@ function HomePage() {
   const [filter, setFilter] = useState([]);
 
 
-  useEffect(() =>{
+  useEffect(() => {
     const api = axios.create({ baseURL: BASE_URL });
     api.get("/movie/upcoming", { params: { api_key, page:2 }  })
     .then((res) => {
       setMovies(res.data.results);
     });
   }, []);
+  
+  
+  useEffect(() => {
+    const filteredMovies = movies.filter((movie) => {
+      return true;
+    }) 
+    console.log(filteredMovies)
+  }, [filter]);
 
-
-  const onChangelistener = (e) => {
-
+  const onChangelistener = (e) => { 
+    setFilter(e.target.value)
   }
 
   return (
@@ -33,7 +40,7 @@ function HomePage() {
       <header className="App-header">
         <img src ={image} style={{width : "560px"}} alt="PosterImage" className="logo"/>
       </header>
-      <input value = "" placeholder ="Search your movie" key="random1" onChange= { onChangelistener } />
+      <input value = {filter} placeholder ="Search your movie" key="inputMovie" onChange= { onChangelistener } />
       <div className ="grid">
         {movies.map(({ title, poster_path, id }) => (
           <div className="item">
