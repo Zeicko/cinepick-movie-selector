@@ -12,7 +12,8 @@ const getImage = (path) => `https://image.tmdb.org/t/p/w300/${path}`;
 
 function HomePage() {
   const [movies, setMovies] = useState([]);
-  const [filter, setFilter] = useState([]);
+  const [printedMovies, setPrintedMovies] = useState([]);
+  const [filter, setFilter] = useState("");
 
 
   useEffect(() => {
@@ -26,23 +27,22 @@ function HomePage() {
   
   useEffect(() => {
     const filteredMovies = movies.filter((movie) => {
-      return true;
-    }) 
-    console.log(filteredMovies)
+      return movie.title.toLowerCase().includes(filter.toLowerCase());
+      
+    });
+    
+    setPrintedMovies(filteredMovies)
   }, [filter]);
 
-  const onChangelistener = (e) => { 
-    setFilter(e.target.value)
-  }
 
   return (
     <body>
       <header className="App-header">
         <img src ={image} style={{width : "560px"}} alt="PosterImage" className="logo"/>
       </header>
-      <input value = {filter} placeholder ="Search your movie" key="inputMovie" onChange= { onChangelistener } />
+      <input value = {filter} placeholder ="Search your movie" key="inputMovie" onChange= { (e) => { setFilter(e.target.value)} } />
       <div className ="grid">
-        {movies.map(({ title, poster_path, id }) => (
+        {printedMovies.map(({ title, poster_path, id }) => (
           <div className="item">
               <p style={{color: "#FFFFFF"}}>{ title }</p>
               <Link to={ `/movie/${id}` }>
