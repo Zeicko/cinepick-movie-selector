@@ -1,0 +1,58 @@
+.wave
+{
+    
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.contact
+{
+    text-transform: uppercase;
+    font-family: FuturaPTDemi;
+    font-weight: 500;
+    font-size: 29px;
+}
+.number
+{
+    font-size: 21px;
+
+}
+
+.social
+{
+    font-size: 30px;
+}
+
+.footerLine
+{
+    width: 100%;
+
+}
+
+.footerLinks
+{
+    padding-top: 245px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.footerText
+{
+    text-align: center;
+
+}
+.logoW
+{
+    padding-top: 25px;
+    width: 187px;
+    height: 73px;
+}
+
+
+.logoI, .logoL
+{
+    margin-left: 15px;
+
+}
