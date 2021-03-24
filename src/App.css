@@ -117,14 +117,21 @@ h3{
 .productionCompagnie{
   display: flex;
   flex-wrap: wrap;
+  margin-top: 10px;
 }
 
 .catégorie{
   display: flex;
-  transform: translateY(16px);
 }
 
 .searchBar{
   position: relative;
 
+}
+
+.time{
+  margin-right: 30px;
+}
+.date{
+  margin-right: 30px;
 }

@@ -55,16 +55,16 @@ function MoviePage() {
                     </div>
                   <div className="third-div">
                     <div className="divNumber">
-                      <p>Date de sortie : {movieInfo.release_date}</p>
-                      <p>Durée du film : {movieInfo.runtime} minutes </p>
+                      <p className="date"><strong>Date de sortie : </strong>{movieInfo.release_date}</p>
+                      <p className="time"><strong>Durée du film : </strong>{movieInfo.runtime} minutes </p>
                       
-                      <div className="catégorie"><span><strong>Catégorie(s) :</strong></span>{movieInfo.genres.map((genre) =>
-                        <span className='genres'>{genre.name}</span>
+                      <div className="catégorie"><p><strong>Catégorie(s) :</strong></p>{movieInfo.genres.map((genre) =>
+                        <p className='genres'>{genre.name}</p>
                       )}
                       </div>
                       <div className="productionCompagnie" ><span><strong>Compagnie de production :</strong></span>{movieInfo.production_companies.map((company) =>
                         
-                        <span className='genres'> {company.name}, {company.origin_country} ;</span>
+                        <span  id="prod"className='genres'> {company.name}, {company.origin_country} ;</span>
                         
                         )}
                       </div>
