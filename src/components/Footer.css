@@ -1,15 +1,20 @@
 .wave
 {
-    
+    text-align: left;
     position: absolute;
     width: 100%;
     z-index: -1;
 }
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
 .contact
 {
     text-transform: uppercase;
-    font-family: FuturaPTDemi;
     font-weight: 500;
     font-size: 29px;
 }
@@ -45,9 +50,8 @@
 }
 .logoW
 {
-    padding-top: 25px;
-    width: 187px;
-    height: 73px;
+    width: 668px;
+    height: 610px;
 }
 
 
