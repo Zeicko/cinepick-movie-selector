@@ -40,7 +40,7 @@ function HomePage() {
       <header className="App-header">
         <img src ={image} style={{width : "560px"}} alt="PosterImage" className="logo"/>
       </header>
-      <input value = {filter} placeholder ="Search your movie" key="inputMovie" onChange= { (e) => { setFilter(e.target.value)} } />
+      <input  className ="searchBar" value = {filter} placeholder ="Search your movie" key="inputMovie" onChange= { (e) => { setFilter(e.target.value)} } />
       <div className ="grid">
         {printedMovies.map(({ title, poster_path, id , release_date}) => (
           <div className="item">

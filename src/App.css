@@ -123,3 +123,8 @@ h3{
   display: flex;
   transform: translateY(16px);
 }
+
+.searchBar{
+  position: relative;
+
+}
