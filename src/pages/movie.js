@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router";
 import image from "./img/cine.png";
+import { Link } from "react-router-dom";
 
 const api_key = "435c8880fa41fdbe5fba133c47f78d2b";
 const BASE_URL = "https://api.themoviedb.org/3";
@@ -39,7 +40,9 @@ function MoviePage() {
     <body className="bodymovie">
         <div className="App">
           <header className="App-header">
+            <Link to = "../pages/home.js">
           <img src ={image} style={{width : "560px"}} alt="PosterImage" className="logo"/>
+          </Link>
           </header>
             <div className ="container">
               {/* <img  className ="backGround" src = {getImage(movieInfo.backdrop_path)} alt = "Background" /> */}
@@ -58,7 +61,7 @@ function MoviePage() {
                       <p className="date"><strong>Date de sortie : </strong>{movieInfo.release_date}</p>
                       <p className="time"><strong>Durée du film : </strong>{movieInfo.runtime} minutes </p>
                       
-                      <div className="catégorie"><p><strong>Catégorie(s) :</strong></p>{movieInfo.genres.map((genre) =>
+                      <div className="category"><p><strong>Catégorie(s) :</strong></p>{movieInfo.genres.map((genre) =>
                         <p className='genres'>{genre.name}</p>
                       )}
                       </div>
