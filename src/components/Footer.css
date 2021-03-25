@@ -1,9 +1,7 @@
-.wave
-{
-    text-align: left;
-    position: absolute;
-    width: 100%;
-    z-index: -1;
+
+
+.containerfooter{
+    background-color: #BF223B;
 }
 
 ul {
@@ -17,46 +15,59 @@ ul {
     text-transform: uppercase;
     font-weight: 500;
     font-size: 29px;
+    margin: 5px 0;
 }
 .number
 {
     font-size: 21px;
-
+    margin: 5px 0;
 }
 
 .social
 {
     font-size: 30px;
+    margin: 0;
 }
 
 .footerLine
 {
     width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
 
 }
 
 .footerLinks
 {
-    padding-top: 245px;
     display: flex;
     justify-content: space-around;
+    margin: -5px 0 40px 0;
 
 }
 
 .footerText
 {
     text-align: center;
-
+    padding-bottom: 20px;
 }
+
+.logoSocial
+{
+    padding-top: 15px;
+}
+
+.logoSocial a img{
+    height: 70px;
+}
+
 .logoW
 {
-    width: 668px;
-    height: 610px;
+    height: 100px;
 }
 
 
 .logoI, .logoL
 {
-    margin-left: 15px;
+    margin-left: 30px;
 
 }
