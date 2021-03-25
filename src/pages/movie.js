@@ -54,7 +54,7 @@ function MoviePage() {
                   <div className="second div">
                     <img src = { getImage(movieInfo.poster_path) } alt ="Poster"/>
                     </div>
-                  <div className="third-div">
+                    <div className="third-div">
                     <div className="divNumber">
                       <p className="date"><strong>Date de sortie : </strong>{movieInfo.release_date}</p>
                       <p className="time"><strong>Durée du film : </strong>{movieInfo.runtime} minutes </p>
@@ -73,21 +73,26 @@ function MoviePage() {
                     <div className="divsynopsis">
                         <h3>Synopsis</h3>
                         {movieInfo.overview}
-                        {movieInfo.homepage}
+                        
                         
                     </div>
                     <div className='Avis'><span><strong>Avis du publique : </strong></span>
-                    <span>{movieInfo.vote_average}</span>
-                    </div>
-                    <div className='buttons'>
+                    <span>{movieInfo.vote_average}/10</span><div className='buttons'>
                     <span className='redButton'>Noter</span>
                     <span className='redButton'>Voir les commentaires</span>
-
                     </div>
+                    
+                    </div>
+                    <div className="bigButtons">
+                    <span className='whiteButton'><strong>Ajouter à ma liste</strong></span>
+                    </div>
+                    
                     
                   </div>
                 </div>
               </div>
+            </div>
+            <div className='wavemoving'>
             </div>
             </div>
 
