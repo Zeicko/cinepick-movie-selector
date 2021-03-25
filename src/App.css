@@ -139,3 +139,65 @@ h3{
 .date{
   margin-right: 30px;
 }
+
+
+
+/*          NAV BAR           */  
+
+nav{
+  height: 50px;
+  background:#bf223b;
+}
+
+.list{
+  list-style-type: none;
+  background:#bf223b;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.items{
+  margin-right: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.items:hover{
+color: #db8d9a;
+}
+
+.btn{
+  display: none;
+}
+
+@media screen and (max-width: 500px){
+  .list{
+    flex-direction: column;
+    height: 200px;
+  }
+  .items:nth-child(1){
+    border-top: 1px solid #fff;
+    margin-top: 50px;
+  }
+  .items{
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    line-height: 50px;
+  }
+  .btn{
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #BF223B;
+    cursor: pointer;
+  }
+}
+
+/*          NAV BAR           */  
