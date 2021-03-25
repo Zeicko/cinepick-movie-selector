@@ -89,9 +89,8 @@ function MoviePage() {
                 </div>
               </div>
             </div>
-            <div className='wave'>
             </div>
-        </div>
+
     </body>
   );
 }

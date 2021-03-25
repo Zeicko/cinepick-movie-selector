@@ -164,7 +164,6 @@ h3{
 .wave{
   width: 100%;
   height: 100px;
-  background: url("pages/img/Wave.png")
 }
 
 
@@ -231,3 +230,9 @@ color: #db8d9a;
 }
 
 /*          NAV BAR           */  
+
+.slider{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
