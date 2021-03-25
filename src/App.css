@@ -141,6 +141,33 @@ h3{
 }
 
 
+.Avis{
+  margin-top: 30px;
+  text-align: left;
+  margin-left: 68px;
+}
+
+.redButton{
+  padding: 4px 15px 6px 15px;
+  border: solid 1px  #E72B44;
+  border-radius: 5px ;
+  color: #E72B44;
+}
+
+.redButton:hover{
+  background: #E72B44;
+  transition: 0.5s;
+  color: #fff;
+  margin-right: 5px;
+}
+
+.wave{
+  width: auto;
+  height: 100px;
+  background: url("../images/Wave.png");
+}
+
+
 
 /*          NAV BAR           */  
 
@@ -174,6 +201,9 @@ color: #db8d9a;
 .btn{
   display: none;
 }
+
+
+
 
 @media screen and (max-width: 500px){
   .list{
