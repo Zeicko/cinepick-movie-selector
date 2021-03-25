@@ -48,6 +48,7 @@ function HomePage() {
             <li className="items">Accueil</li>
             <li className="items">Catalogue</li>
             <li className="items">Nouveautés</li>
+            <li className="item_Espace">Mon Espace</li>
           </ul>
           <button className="btn">BTN</button>
         </nav>

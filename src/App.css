@@ -125,7 +125,7 @@ h3{
 }
 
 .searchBar{
-  width: 225px;
+  width: 250px;
   height: 30px;
   position: relative;
   top: -70px;
@@ -172,17 +172,19 @@ h3{
 
 nav{
   height: 50px;
-  background:#bf223b;
+  background:#031121;
 }
 
 .list{
   list-style-type: none;
-  background:#bf223b;
+  background:#031121;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  top: 22px;
+  left: -150px;
   margin: 0;
   padding: 0;
 }
@@ -191,10 +193,24 @@ nav{
   margin-right: 10px;
   color: white;
   cursor: pointer;
+  padding: 20px;
+}
+
+.item_Espace{
+  margin-right: 10px;
+  color: #E72B44;
+  cursor: pointer;
+  padding: 20px;
+  position: relative;
+  left: 400px;
 }
 
 .items:hover{
-color: #db8d9a;
+color: #E72B44;
+}
+
+.item_Espace:hover{
+  color:white;
 }
 
 .btn{
