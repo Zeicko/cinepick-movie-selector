@@ -49,7 +49,14 @@ function HomePage() {
   return (
     <body>
       <header className="App-header">
-        <img src ={image} style={{width : "560px"}} alt="PosterImage" className="logo"/>
+        <nav>
+          <ul className="list">
+            <li className="items">Accueil</li>
+            <li className="items">Catalogue</li>
+            <li className="items">Nouveautés</li>
+          </ul>
+          <button className="btn">BTN</button>
+        </nav>
       </header>
       <input  className ="searchBar" value = {filter} placeholder ="Search your movie" key="inputMovie" onChange= { (e) => { setFilter(e.target.value)} } />
       <div className ="grid">
