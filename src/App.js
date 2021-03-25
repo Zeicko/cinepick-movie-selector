@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-       <Switch>
+        <Switch>
           <Route exact path="/">
             <HomePage />
           </Route>

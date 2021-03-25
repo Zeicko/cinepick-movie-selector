@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router";
 import image from "./img/cine.png";
-import { Link } from "react-router-dom";
+
 
 const api_key = "435c8880fa41fdbe5fba133c47f78d2b";
 const BASE_URL = "https://api.themoviedb.org/3";
@@ -40,9 +40,7 @@ function MoviePage() {
     <body className="bodymovie">
         <div className="App">
           <header className="App-header">
-            <Link to = "../pages/home.js">
           <img src ={image} style={{width : "560px"}} alt="PosterImage" className="logo"/>
-          </Link>
           </header>
             <div className ="container">
               {/* <img  className ="backGround" src = {getImage(movieInfo.backdrop_path)} alt = "Background" /> */}
