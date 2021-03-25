@@ -162,9 +162,9 @@ h3{
 }
 
 .wave{
-  width: auto;
+  width: 100%;
   height: 100px;
-  background: url("../images/Wave.png");
+  background: url("pages/img/Wave.png")
 }
 
 
