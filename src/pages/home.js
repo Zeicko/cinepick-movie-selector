@@ -66,11 +66,14 @@ function HomePage() {
           ))}
         </div>
       }
-      <div className="slider">
-        <button onClick={()=> {setPage(page - 1)}}></button>
-        <div>{movies.page}</div>
-        <button onClick={()=> {setPage(page + 1)}}></button>
-      </div>
+      
+      { filter === "" && 
+        <div className="slider">
+          {page > 1 && <button onClick={()=> {setPage(page - 1)}}></button>}
+          <div>{movies.page}</div>
+          {page < movies.total_pages && <button onClick={()=> {setPage(page + 1)}}></button>}
+        </div>
+      }
     </body>
   );
 }
