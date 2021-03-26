@@ -3,6 +3,7 @@ import axios from "axios";
 import { useParams } from "react-router";
 import image from "./img/cine.png";
 import { AiFillStar } from "react-icons/ai";
+import {Link} from 'react-router-dom'
 
 
 const api_key = "435c8880fa41fdbe5fba133c47f78d2b";
@@ -45,7 +46,9 @@ for (let i = 0; i < movieInfo.vote_average/2; i++){
     <body className="bodymovie">
         <div className="App">
           <header className="App-header">
-          <img src ={image} style={{width : "560px"}} alt="PosterImage" className="logo"/>
+            <Link to="../">
+              <img src ={image} style={{width : "560px"}} alt="PosterImage" className="logo"/>
+            </Link>
           </header>
             <div className ="container">
               {/* <img  className ="backGround" src = {getImage(movieInfo.backdrop_path)} alt = "Background" /> */}
