@@ -43,7 +43,7 @@ for (let i = 0; i < movieInfo.vote_average/2; i++){
     return <div>Loading...</div>
   } 
   return (
-    <body className="bodymovie">
+    <body className="bodymovie" style={{background:"#031121"}}>
         <div className="App">
           <header className="App-header">
             <Link to="../">

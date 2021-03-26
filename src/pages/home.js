@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import image from "./img/cine.png";
+import gang from "./img/GS.png"
 
 
 
@@ -56,6 +57,7 @@ function HomePage() {
         </nav>
       </header>
       <input  className ="searchBar" value = {filter} placeholder ="Rechercher votre film" key="inputMovie" onChange= { (e) => { setFilter(e.target.value)} } />
+      <img src></img>
       {movies.results &&
         <div className ="grid">
           {movies.results.map(({ title, poster_path, id , release_date}) => (

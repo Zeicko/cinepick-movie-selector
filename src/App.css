@@ -1,14 +1,24 @@
 /*We have only one stylesheet file*/
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700&display=swap');
 
+
+html{
+  background: linear-gradient(black,#031121,#031121  )
+}
 .App {
   text-align: center;
 }
+
+
+
 
 body{
   background-color: #031121;
   color: white;
   font-family: 'Red Hat Display', sans-serif;
+  background: url("pages/img/GS.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .App-header {
@@ -103,11 +113,15 @@ h3{
 }
 
 .grid{
-  margin-top: 100px;
+  margin-top: 500px;
   display:flex;
   flex-wrap: wrap;
   justify-content: center;
   padding-bottom: 50px;
+}
+
+.posterPicture{
+  box-shadow: 0 0 15px 1px black;
 }
 
 .logo{
