@@ -320,3 +320,41 @@ color: #E72B44;
   flex-direction: row;
   justify-content: center;
 }
+
+
+/* MOVING BUTTON*/
+
+
+
+button {
+  border-radius: 4px;
+  background-color: #BF223B;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  padding: 16px;
+  width: 110px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 36px;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+  background-position: right bottom;
+  transition: all .5s ease-out;
+  outline: none;
+}
+
+button{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+
+
+button:hover{
+  background-color: #BF223B;
+  opacity: 0.5;
+}
+

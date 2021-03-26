@@ -76,7 +76,7 @@ function MoviePage() {
                         
                         
                     </div>
-                    <div className='Avis'><span><strong>Avis du publique : </strong></span>
+                    <div className='Avis'><span><strong>Avis du public : </strong></span>
                     <span>{movieInfo.vote_average}/10</span><div className='buttons'>
                     <span className='redButton'>Noter</span>
                     <span className='redButton'>Voir les commentaires</span>
