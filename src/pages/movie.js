@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router";
 import image from "./img/cine.png";
+import { AiFillStar } from "react-icons/ai";
 
 
 const api_key = "435c8880fa41fdbe5fba133c47f78d2b";
 const BASE_URL = "https://api.themoviedb.org/3";
 const getImage = (path) => `https://image.tmdb.org/t/p/w300/${path}`;
+
 // const getVideo = (path) => `https://www.youtube.com/watch?v=${path}`;
 
 function MoviePage() {
@@ -16,7 +18,10 @@ function MoviePage() {
   // const [similarMovie, setSimilarMovie] = useState([0]);
 
 
-
+const stars = []
+for (let i = 0; i < movieInfo.vote_average/2; i++){
+  stars.push(<AiFillStar size={20}/>)
+}
 
   useEffect(() =>{
     const api = axios.create({ baseURL: BASE_URL });
@@ -77,7 +82,7 @@ function MoviePage() {
                         
                     </div>
                     <div className='Avis'><span><strong>Avis du public : </strong></span>
-                    <span>{movieInfo.vote_average}/10</span><div className='buttons'>
+                    <span>{stars}</span><div className='buttons'>
                     <span className='redButton'>Noter</span>
                     <span className='redButton'>Voir les commentaires</span>
                     </div>
