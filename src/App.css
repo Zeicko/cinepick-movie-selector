@@ -111,9 +111,10 @@ h3{
 
 .logo{
   position: absolute;
-  top: -225px;
+  top: -230px;
   left:-100px;
   width: 40%;
+  z-index: 1;
 }
 
 .productionCompagnie{
@@ -132,8 +133,13 @@ h3{
   position: relative;
   top: -70px;
   left: 200px;
-  border-radius: 4px;
+  border-radius: 50px;
+  border: none;
+  padding-left: 15px;
+  outline: none;
 }
+
+input
 
 .time{
   margin-right: 30px;
@@ -158,7 +164,7 @@ h3{
 .bigButtons{
   text-align: left;
   margin-left: 50px;
-  margin-top:30px
+  margin-top:50px
 }
 
 .redButton{
@@ -200,6 +206,10 @@ h3{
   background-position-y: 800px;
 }
 
+.item{
+  width:300px;
+}
+
 @keyframes wavemove{
   0%{
     background-position: 0px;
@@ -209,6 +219,7 @@ h3{
     background-position: -1920px;
   }
 }
+
 
 
 
@@ -241,7 +252,10 @@ nav{
   color: white;
   cursor: pointer;
   padding: 20px;
+  text-align: center;
 }
+
+
 
 .item_Espace{
   margin-right: 10px;
@@ -263,6 +277,8 @@ color: #E72B44;
 .btn{
   display: none;
 }
+
+
 
 
 

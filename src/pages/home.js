@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import image from "./img/cine.png";
 
 
 
@@ -43,6 +44,7 @@ function HomePage() {
   return (
     <body>
       <header className="App-header">
+      <img src ={image} style={{width : "560px"}} alt="PosterImage" className="logo"/>
         <nav>
           <ul className="list">
             <li className="items">Accueil</li>
@@ -53,15 +55,16 @@ function HomePage() {
           <button className="btn">BTN</button>
         </nav>
       </header>
-      <input  className ="searchBar" value = {filter} placeholder ="Search your movie" key="inputMovie" onChange= { (e) => { setFilter(e.target.value)} } />
+      <input  className ="searchBar" value = {filter} placeholder ="Rechercher votre film" key="inputMovie" onChange= { (e) => { setFilter(e.target.value)} } />
       {movies.results &&
         <div className ="grid">
           {movies.results.map(({ title, poster_path, id , release_date}) => (
             <div className="item" key = {id}>
-                <p style={{color: "#FFFFFF"}}>{ title }</p>
+                
                 <Link to={ `/movie/${id}` }>
                     <img style = {{borderRadius : "20px"}}className="posterPicture" src={ getImage(poster_path) } alt ="PosterImage"/>
                 </Link>
+                <p style={{color: "#FFFFFF"}}>{ title }</p>
               {release_date}
             </div>
           ))}
@@ -75,6 +78,8 @@ function HomePage() {
           {page < movies.total_pages && <button onClick={()=> {setPage(page + 1)}}></button>}
         </div>
       }
+      <div className='wavemoving'>
+      </div>
     </body>
   );
 }
