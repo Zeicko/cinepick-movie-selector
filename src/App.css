@@ -164,6 +164,7 @@ input:hover{
 .buttons{
   text-align: left;
   margin-left: 50px;
+  margin-top: 20px;
 }
 
 .bigButtons{
@@ -185,7 +186,6 @@ input:hover{
   background: #E72B44;
   transition: 0.5s;
   color: #fff;
-  margin-right: 5px;
 }
 
 .whiteButton{
@@ -288,6 +288,8 @@ color: #E72B44;
 
 
 
+
+
 @media screen and (max-width: 500px){
   .list{
     flex-direction: column;
@@ -317,8 +319,11 @@ color: #E72B44;
 
 .slider{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  text-align: center;
+  position: relative;
+  align-items: center;
 }
 
 

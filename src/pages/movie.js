@@ -82,11 +82,11 @@ for (let i = 0; i < movieInfo.vote_average/2; i++){
                         
                     </div>
                     <div className='Avis'><span><strong>Avis du public : </strong></span>
-                    <span>{stars}</span><div className='buttons'>
+                    <span>{stars}</span>
+                    
+                    </div><div className='buttons'>
                     <span className='redButton'>Noter</span>
                     <span className='redButton'>Voir les commentaires</span>
-                    </div>
-                    
                     </div>
                     <div className="bigButtons">
                     <span className='whiteButton'><strong>Ajouter à ma liste</strong></span>

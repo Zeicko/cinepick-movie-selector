@@ -23,7 +23,7 @@ return (
                             <img src={logoF} className="logoF" alt="logo Facebook"/>
                         </a>
                         <a href="https://www.instagram.com/">
-                            <img src={logoI} className="logoI" alt="logo Instagram"/>
+                            <img src={logoI} className="logoI" alt="logo Instagram" />
                         </a>
                         <a href="https://www.linkedin.com/">
                             <img src={logoL} className="logoL" alt="logo linkedin"/>
