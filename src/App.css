@@ -139,7 +139,12 @@ h3{
   outline: none;
 }
 
-input
+
+
+
+input:hover{
+  box-shadow:0px 0px 15px 2px rgb(73, 72, 72);
+}
 
 .time{
   margin-right: 30px;
